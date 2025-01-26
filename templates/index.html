@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Handmade Harmony</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Header Styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #071739;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #cdd5db;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            background-color: #ffffff;
+            border: 1px solid #333;
+            color: #071739;
+        }
+
+        .signup-btn {
+            background-color: #ffffff;
+            color: #071739;
+            border: 1px solid #333;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(#4b6382,#a4b5c4);
+        }
+
+        .quote {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Product and Artist Sections */
+        .section-title {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 40px 0 20px;
+            font-size: 28px;
+        }
+
+        .products-grid, .artists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 5%;
+        }
+
+        .product-card, .artist-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .product-card img, .artist-card img {
+            max-width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .art-name {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Handmade Harmony</div>
+        <div class="auth-buttons">
+            <a href="/login">
+                <button class="login-btn" >Login</button>
+            </a>
+            <a href="/">
+                <button class="signup-btn">Sign Up</button>
+            </a>
+        </div>
+    </header>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <blockquote class="quote">
+            "Art enables us to find ourselves and lose ourselves at the same time."
+        </blockquote>
+    </section>
+    <!-- Popular Products Section -->
+    <section>
+        <h2 class="section-title">Popular Artworks</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/art1.jpeg') }}" alt="Artwork">
+                <h3 class="art-name">Sunset Dreams</h3>
+                <p>$299.99</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/art2.jpeg') }}" alt="Artwork">
+                <h3 class="art-name">Urban Rhythms</h3>
+                <p>$450.00</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/art3.jpeg') }}" alt="Artwork">
+                <h3 class="art-name">Forest Whispers</h3>
+                <p>$199.50</p>
+            </div>
+        </div>
+    </section>
+    <!-- Popular Artists Section -->
+    <section>
+        <h2 class="section-title">Featured Artists</h2>
+        <div class="artists-grid">
+            <div class="artist-card">
+                <img src="{{ url_for('static', filename='images/person1.jpeg') }}" alt="Artist">
+                <h3 class="art-name">Emma Rodriguez</h3>
+                <p>Landscape Painter</p>
+            </div>
+            <div class="artist-card">
+                <img src="{{ url_for('static', filename='images/person3.jpeg') }}" alt="Artist">
+                <h3 class="art-name">Michael Chen</h3>
+                <p>Digital Artist</p>
+            </div>
+            <div class="artist-card">
+                <img src="{{ url_for('static', filename='images/person1.jpeg') }}" alt="Artist">
+                <h3 class="art-name">Sarah Kim</h3>
+                <p>Abstract Expressionist</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Profile - ArtVenue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .profile-info h1 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .profile-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .section-title {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin: 30px 0 20px;
+        }
+        .purchased-art {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .art-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .art-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="" alt="Profile Picture" class="profile-pic">
+            <div class="profile-info">
+                <h1>Sarah Johnson</h1>
+                <p>Art Enthusiast</p>
+                <p>Member since: January 2024</p>
+                <p>Email: sarah.johnson@example.com</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Purchased Artworks</h2>
+        <div class="purchased-art">
+            <div class="art-card">
+                <img src="WhatsApp Image 2025-01-25 at 11.14.35 PM.jpeg" alt="Artwork">
+                <h3>Sunset Dreams</h3>
+                <p>Purchased: Dec 15, 2023</p>
+            </div>
+            <div class="art-card">
+                <img src="WhatsApp Image 2025-01-25 at 11.57.35 PM.jpeg" alt="Artwork">
+                <h3>Urban Rhythms</h3>
+                <p>Purchased: Jan 10, 2024</p>
+            </div>
+            <div class="art-card">
+                <img src="WhatsApp Image 2025-01-25 at 11.13.22 PM.jpeg" alt="Artwork">
+                <h3>Forest Whispers</h3>
+                <p>Purchased: Feb 5, 2024</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Favorites</h2>
+        <div class="purchased-art">
+            <div class="art-card">
+                <img src="/api/placeholder/300/300" alt="Artwork">
+                <h3>Mountain Serenity</h3>
+            </div>
+            <div class="art-card">
+                <img src="/api/placeholder/300/300" alt="Artwork">
+                <h3>City Lights</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
